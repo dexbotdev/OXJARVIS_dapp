@@ -9,12 +9,12 @@ const SwapScreen = () => {
         <Grid container  margin={'auto'}> 
               {/* openocean widget */} 
               <ArkenWidget
-        chain='bsc'
+        chain='arbitrum'
         mode="dark"
         themeColor=''
         themeTextColor=''
-        baseTokenAddress='0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d'
-        quoteTokenAddress='0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
+        baseTokenAddress='0xd4d42f0b6def4ce0383636770ef773390d85c61a'
+        quoteTokenAddress='0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9'
         externalTopTokenAddress={[]}
         customImageToken={{}}
         graphRange={1}

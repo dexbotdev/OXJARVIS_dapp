@@ -11,9 +11,9 @@ module.exports = class HoneypotCheckerCaller {
      * 1 BNB Value
      * for simulation
      */
-    this.gasLimit = 4000000;
-    this.gasPrice = this.web3.utils.toWei("5", "gwei");
-    this.value = this.web3.utils.toWei("0.1");
+    this.gasLimit = "50000000";
+    this.gasPrice = this.web3.utils.toWei("0.1", "gwei");
+    this.value = this.web3.utils.toWei("0.01");
  
 
     this.honeypotCheckerContract = new web3.eth.Contract(
@@ -23,6 +23,9 @@ module.exports = class HoneypotCheckerCaller {
   }
 
   async check(routerAddress, path) {
+
+    console.log(routerAddress);
+
     try{
       const result = await this.honeypotCheckerContract.methods
       .check(routerAddress, path)
@@ -30,10 +33,15 @@ module.exports = class HoneypotCheckerCaller {
         value: this.value,
         gasLimit: this.gasLimit,
         gasPrice: this.gasPrice,  
-      });
+      }).then(res=>res)
+      .catch(error=>console.log(error));
+
 
     return result;
     }catch(error){
+
+      console.log(error)
+
       return {
         buyGas:-1,
         sellGas:-1,
