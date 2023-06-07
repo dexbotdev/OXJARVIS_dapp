@@ -12,6 +12,34 @@ const withTM = require('next-transpile-modules')([
 ])
 
 module.exports = withTM({
+  reactStrictMode: true,
+	images: {
+		domains: ['icons.llama.fi', 'assets.coingecko.com']
+	},
+	compiler: {
+		styledComponents: true
+	},
+	async headers() {
+		return [
+			{
+				source: '/:path*',
+				headers: [
+					{
+						key: 'Access-Control-Allow-Origin',
+						value: '*'
+					},
+					{
+						key: 'Access-Control-Allow-Methods',
+						value: 'GET'
+					},
+					{
+						key: 'Access-Control-Allow-Headers',
+						value: 'X-Requested-With, content-type, Authorization'
+					}
+				]
+			}
+		];
+	},
   trailingSlash: true,
   reactStrictMode: false,
   experimental: {

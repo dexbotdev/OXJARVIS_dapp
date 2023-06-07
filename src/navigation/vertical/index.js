@@ -2,11 +2,11 @@
 import HomeOutline from 'mdi-material-ui/HomeOutline'
 import MessageOutline from 'mdi-material-ui/MessageOutline'
 import CalendarBlankOutline from 'mdi-material-ui/CalendarBlankOutline'
-import Abacus from 'mdi-material-ui/Abacus'
-import Unity from 'mdi-material-ui/Unity'
+import   Twitter   from 'mdi-material-ui/Twitter' 
+import   Discord   from 'mdi-material-ui/Discord' 
+import   Timeline   from 'mdi-material-ui/Timeline' 
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
-import { Telegram } from '@mui/icons-material'
-
+ 
 const navigation = () => {
   return [
     {
@@ -37,24 +37,7 @@ const navigation = () => {
     },
     {
       sectionTitle: 'Section'
-    },
-    {
-      title: 'Swap',
-      icon: Abacus,
-      path: '/swap'
-    },
-    {
-      title: 'CoinaLyzerBot',
-      icon: Telegram,
-      externalLink: true,
-      openInNewTab: true,
-      path: 'https://t.me/CoinaLyzerBot'
-    },
-    {
-      title: 'Partnerships',
-      icon: Unity,
-      path: '/partnerships'
-    },,
+    }, 
     {
       title: 'Tokenomics',
       icon: GoogleCirclesExtended,
@@ -69,14 +52,28 @@ const navigation = () => {
       title: 'Roadmap',
       icon: CalendarBlankOutline,
       path: '/roadmap'
-    },
+    }, 
     {
-      title: 'Community',
-      icon: HomeOutline, 
+      title: 'Twitter',
+      icon: Twitter, 
       externalLink: true,
       openInNewTab: true,
       path: 'https://t.me/Coinalyzer'
-    }
+    },
+    {
+      title: 'Discord',
+      icon: Discord, 
+      externalLink: true,
+      openInNewTab: true,
+      path: 'https://t.me/Coinalyzer'
+    },
+    {
+      title: 'Telegram',
+      icon: Timeline, 
+      externalLink: true,
+      openInNewTab: true,
+      path: 'https://t.me/Coinalyzer'
+    }, 
   ]
 }
 
